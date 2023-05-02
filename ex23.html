@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./to-do-list.ico" type="image/x-icon">
+    <title>To Do List</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-settings {
+            min-height: 100vh;
+            background: rgb(121, 13, 121);
+        }
+
+        .header {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            background: rgb(255, 71, 71);
+            color: white;
+        }
+
+        .form-box {
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+        }
+
+        .buttons-box {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        li {
+            margin-bottom: .5rem;
+        }
+
+        input {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 14px;
+            font-weight: 1000;
+            line-height: 20px;
+            list-style: none;
+            padding: 6px 16px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        button {
+            appearance: none;
+            background-color: #FAFBFC;
+            border: 1px solid rgba(27, 31, 35, 0.15);
+            border-radius: 6px;
+            box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+            box-sizing: border-box;
+            color: #24292E;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-size: 7px;
+            font-weight: 500;
+            line-height: 10px;
+            list-style: none;
+            padding: 3px 8px;
+            position: relative;
+            transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            white-space: nowrap;
+            word-wrap: break-word;
+        }
+
+        .input-button:hover {
+            color: white;
+            background-color: rgb(255, 0, 140);
+        }
+
+        button:hover {
+            color: white;
+            background-color: green;
+        }
+
+        .task-input {
+            margin-top: 1.5rem;
+        }
+
+        .to-do-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30rem;
+            gap: 1rem;
+            margin-top: 1rem;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="header">To Do List &#128195</nav>
+    <section class="section-settings">
+        <div class="form-box">
+            <input class="task-input input-text" type="text" placeholder="ex.: Wash Clothes" />
+        </div>
+        <div class="buttons-box">
+            <input class="task-input input-button" type="button" value="Add Task" />
+            <input class="task-input input-button save-list" type="button" value="Save List" />
+            <input class="task-input input-button load-list" type="button" value="Load Tasks" />
+        </div>
+
+
+        <ul class="to-do-list"></ul>
+    </section>
+    <script src="./ex23.js"></script>
+</body>
+
+</html>
